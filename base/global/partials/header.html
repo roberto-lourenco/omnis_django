@@ -3,8 +3,8 @@
 <header id="header-top">
     <nav class="navbar navbar-expand-md nav-container">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <picture><img src="assets/img/logo_omnis.png"
+        <a class="navbar-brand" href="{% url 'home'%}">
+          <picture><img src="{% static 'img/logo_omnis.png' %}"
               alt="Imagem de um escudo em forma de O com um veiculo pendurado em um cadeado. A sua direita escrito: mnis"
               class="d-inline-block" />
           </picture>
@@ -16,7 +16,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" aria-current="page" href="{% url 'home'%}">Início</a>
+            <a class="nav-link" aria-current="page" href="{% url 'home'%}">Início</a>  <!-- Será necessário criar um current:"page" responsivo no JS -->
             <a class="nav-link" href="{% url 'planos'%}">Planos</a>
             <a class="nav-link" href="{% url 'servicos'%}">Serviços</a>
             <button class="btn-cotacao-header" onclick="window.location.href='{% url 'home'%}#form-cotacao'">Cotar grátis</button>

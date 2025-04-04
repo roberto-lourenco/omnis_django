@@ -1,6 +1,9 @@
 {% extends "global/base.html" %}
 
 {% block main %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+
 
   <!-- MAIN -->
   <main>
@@ -100,7 +103,7 @@
               <h1 class="display-4 fw-bold lh-1 mb-3 title-hero">
                 Proteja seu veículo com a melhor <span class="span-title-hero">cobertura</span>
               </h1>
-              <img class="vetor-hero" id="vetor-hero" src="assets/img/vetor_hero2.png"
+              <img class="vetor-hero" id="vetor-hero" src="{% static 'img/vetor_hero2.png' %}"
                 alt="Imagem de um veiculo azul com um escudo e pessoas ao seu redor.">
               <p class="lead lh-2 mb-4 description-hero">
                 Oferecemos planos completos e personalizados para sua tranquilidade e segurança.
@@ -110,7 +113,7 @@
                 <button type="button" class="btn-learn-more px-3 me-md-2">
                   Saiba Mais
                 </button>
-                <button type="button" class="btn-contact px-3" onclick="window.location.href='contato.html'">
+                <button type="button" class="btn-contact px-3" onclick="window.location.href='{% url 'contato'%}'">
                   Fale conosco
                 </button>
               </div>
@@ -140,13 +143,13 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="card">
-                    <img src="assets/img/car_protection.gif" class="card-img-top"
+                    <img src="{% static 'img/car_protection.gif' %}" class="card-img-top"
                       alt="Desenho de um carro com um escudo azul na frente"
                       style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto;">
                     <div class="card-body text-center">
                       <p class="card-text">Com nossos planos, você está coberto contra roubo, colisões e danos a
                         terceiros. Oferecemos a máxima proteção para o seu veículo e sua tranquilidade.</p>
-                      <a href="planos.html" class="btn btn-primary">Saiba mais</a>
+                      <a href="{% url 'planos'%}" class="btn btn-primary">Saiba mais</a>
                     </div>
                   </div>
                 </div>
@@ -163,7 +166,7 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="card">
-                    <img src="assets/img/24-7.gif" class="card-img-top"
+                    <img src="{% static 'img/24-7.gif' %}" class="card-img-top"
                       alt="Desenho de um telefone com o numero 24 ao centro"
                       style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto;">
                     <div class="card-body text-center">
@@ -186,7 +189,7 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <div class="card">
-                    <img src="assets/img/descount.gif" class="card-img-top"
+                    <img src="{% static 'img/descount.gif' %}" class="card-img-top"
                       alt="Uma seta para baixo indicando preço baixo"
                       style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto;">
                     <div class="card-body text-center">
@@ -206,20 +209,20 @@
           <div class="row row-cols-1 row-cols-md-3 g-4 d-none d-lg-flex">
             <div class="col">
               <div class="card">
-                <img src="assets/img/car_protection.gif" class="card-img-top"
+                <img src="{% static 'img/car_protection.gif' %}" class="card-img-top"
                   alt="Desenho de um carro com um escudo azul na frente"
                   style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto;">
                 <div class="card-body text-center">
                   <h3 class="card-title">Proteção Completa</h3>
                   <p class="card-text">Com nossos planos, você está coberto contra roubo, colisões e danos a terceiros.
                     Oferecemos a máxima proteção para o seu veículo e sua tranquilidade.</p>
-                  <a href="planos.html" class="btn btn-primary">Saiba mais</a>
+                  <a href="{% url 'planos'%}" class="btn btn-primary">Saiba mais</a>
                 </div>
               </div>
             </div>
             <div class="col">
               <div class="card">
-                <img src="assets/img/24-7.gif" class="card-img-top"
+                <img src="{% static 'img/24-7.gif' %}" class="card-img-top"
                   alt="Desenho de um telefone com o numero 24 ao centro"
                   style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto;">
                 <div class="card-body text-center">
@@ -232,7 +235,7 @@
             </div>
             <div class="col">
               <div class="card">
-                <img src="assets/img/descount.gif" class="card-img-top" alt="Uma seta para baixo indicando preço baixo"
+                <img src="{% static 'img/descount.gif' %}" class="card-img-top" alt="Uma seta para baixo indicando preço baixo"
                   style="width: 200px; height: 200px; object-fit: cover; margin: 0 auto;">
                 <div class="card-body text-center">
                   <h3 class="card-title">Descontos Exclusivos</h3>
@@ -260,11 +263,11 @@
               plataforma moderna e fácil de usar, oferecemos uma experiência rápida, transparente e sem complicação. Com
               a Omnis, você tem a confiança de estar protegido com o que há de mais moderno no mercado.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-              <button class="link-quote" href="planos.html">Confira nossos planos</button>
+              <button class="link-quote" href="{% url 'planos'%}">Confira nossos planos</button>
             </div>
           </div>
           <aside class="col-lg-4 offset-lg-1 p-0 d-flex justify-content-center align-items-center">
-            <img class="rounded-lg-3 vetor-quote" src="assets/img/vetor_hero.png" alt="Carro azul formato vetor">
+            <img class="rounded-lg-3 vetor-quote" src="{% static 'img/vetor_hero.png' %}" alt="Carro azul formato vetor">
           </aside>
         </article>
       </div>
@@ -378,11 +381,15 @@
   </main>
   <!-- END MAIN -->
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-<script src="assets/js/termos.js"></script>
-<script src="assets/js/home.js"></script>
-<script src="assets/js/cotacao/cotacao.js"></script>
+  
+  <script>
+    // Variavel global para o banner da Hero section
+    const bannerHomeUrl = "{% static 'img/banner2.png' %}";
+</script>
+
+  <script src="{% static 'js/home.js' %} "></script>
+  <script src="{% static 'js/termos.js' %}"></script>
+  <script src="{% static 'js/cotacao/cotacao.js' %} "></script>
 
 {% endblock main %}
 
